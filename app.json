@@ -1,49 +1,25 @@
 {
   "expo": {
-    "owner": "vanhuutoan27",
-    "name": "monhealth",
-    "slug": "monhealth",
-    "scheme": "monhealth",
-    "version": "1.0.0",
+    "name": "SANA Health",
+    "slug": "sana-health",
+    "scheme": "sanahealth",
+    "version": "0.1.0",
     "orientation": "portrait",
-    "icon": "./public/assets/monhealth-splash.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./public/assets/monhealth-splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.vanhuutoan27.monhealth"
+      "bundleIdentifier": "kz.sanahealth.app"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./public/assets/monhealth-splash.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.vanhuutoan27.monhealth"
+      "package": "kz.sanahealth.app"
     },
     "web": {
       "bundler": "metro",
-      "favicon": "./public/assets/monhealth-splash.png"
+      "output": "single"
     },
     "plugins": ["expo-router"],
-    "updates": {
-      "fallbackToCacheTimeout": 0,
-      "url": "https://u.expo.dev/d10a089c-848d-4b64-98ac-1097860ed7ce"
-    },
-    "extra": {
-      "router": {
-        "origin": false
-      },
-      "eas": {
-        "projectId": "d10a089c-848d-4b64-98ac-1097860ed7ce"
-      }
-    },
-    "runtimeVersion": {
-      "policy": "appVersion"
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }

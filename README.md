@@ -1,203 +1,68 @@
-# 🌱 Monhealth - Ứng dụng chăm sóc sức khỏe toàn diện
+# SANA Health
 
-<div align="center">
-  <img src="https://firebasestorage.googleapis.com/v0/b/diamoondb-1412.appspot.com/o/Monhealth%2Ftests%2F29.jpg?alt=media&token=b73e8c97-8545-4ed7-ace1-97b92de428e3" alt="Monhealth Home Meal Tab Screen" />
-  <p><i>Theo dõi sức khỏe của bạn mọi lúc, mọi nơi</i></p>
-</div>
+Первая адаптация [Monhealth](https://github.com/SEP490-Monhealth/SEP490-Monhealth-Healthcare-App-MB) под медицинский marketplace и membership для Казахстана. Ветка: `feat/sana-health-marketplace`. MIT-лицензия и исходная Git-история сохранены.
 
-## 📱 Tổng quan
+## Запуск на iPhone в Expo Go
 
-**Monhealth** là ứng dụng di động hiện đại giúp người dùng quản lý sức khỏe toàn diện trong cuộc sống hàng ngày. Được phát triển bằng React Native và Expo, ứng dụng mang đến trải nghiệm mượt mà, nhanh chóng trên cả nền tảng iOS và Android.
+Требования: Node.js LTS (рекомендуется 24, `.nvmrc`), npm, актуальный **Expo Go с поддержкой SDK 57**, iPhone и компьютер в одной Wi-Fi сети.
 
-## ✨ Tính năng chính
-
-### 📊 Quản lý dinh dưỡng & bữa ăn
-
-- **Theo dõi chi tiết**: Ghi lại và phân tích lượng calo, protein, carbs và chất béo từ mỗi bữa ăn
-- **Thư viện thực phẩm**: Cơ sở dữ liệu đầy đủ với hàng nghìn món ăn phổ biến
-- **Biểu đồ dinh dưỡng**: Hiển thị tiến trình và xu hướng dinh dưỡng theo thời gian
-
-### 💧 Theo dõi nước uống
-
-- **Nhắc nhở thông minh**: Thông báo uống nước định kỳ dựa trên thói quen cá nhân
-- **Mục tiêu tùy chỉnh**: Điều chỉnh mục tiêu lượng nước uống dựa trên nhu cầu cá nhân
-- **Theo dõi trực quan**: Biểu đồ trực quan hiển thị lượng nước uống hàng ngày
-
-### 🏋️ Gợi ý và theo dõi bài tập
-
-- **Thư viện bài tập**: Hàng trăm bài tập với hướng dẫn chi tiết
-- **Lịch tập luyện**: Lập kế hoạch tập luyện với nhắc nhở tự động
-- **Đo lường kết quả**: Theo dõi tiến trình và calo đã đốt cháy qua từng buổi tập
-
-### 🥗 Phân loại thực phẩm thông minh
-
-- **Tìm kiếm nhanh**: Dễ dàng tìm thực phẩm theo tên hoặc danh mục
-- **Phân loại chi tiết**: Nhóm thực phẩm theo đặc tính dinh dưỡng và lợi ích sức khỏe
-- **Gợi ý cá nhân hóa**: Đề xuất thực phẩm phù hợp với mục tiêu sức khỏe
-
-## 🛠️ Công nghệ sử dụng
-
-### Frontend
-
-- **React Native**: Framework xây dựng ứng dụng di động đa nền tảng
-- **Expo**: Bộ công cụ và dịch vụ giúp đơn giản hóa quá trình phát triển
-- **TypeScript**: Hệ thống kiểu dữ liệu tĩnh giúp code an toàn và dễ bảo trì
-- **TailwindCSS (nativewind)**: Công cụ styling hiệu quả với các utility classes
-
-### State Management & Data Fetching
-
-- **Zustand**: Quản lý state toàn cục đơn giản và mạnh mẽ
-- **React Query**: Quản lý trạng thái server-side, caching và đồng bộ dữ liệu
-- **AsyncStorage**: Lưu trữ dữ liệu cục bộ trên thiết bị
-
-### Networking & Integration
-
-- **Axios**: Thư viện HTTP client mạnh mẽ cho giao tiếp API
-- **SignalR**: Hỗ trợ kết nối realtime cho các tính năng tương tác
-
-### UI/UX Components
-
-- **Lottie**: Tạo hoạt ảnh đẹp mắt và mượt mà
-- **React Native SVG**: Hỗ trợ đồ họa vector
-- **React Native Circular Progress**: Tạo biểu đồ tròn hiển thị tiến trình
-
-### Validation & Security
-
-- **Zod**: Xác thực schema dữ liệu mạnh mẽ
-- **React Hook Form**: Quản lý form và validation hiệu quả
-
-### Development Tools
-
-- **ESLint & Prettier**: Đảm bảo code style nhất quán
-- **Jest**: Framework testing cho unit tests
-- **React Testing Library**: Công cụ kiểm thử UI components
-
-## 📥 Cài đặt và khởi chạy
-
-### Yêu cầu hệ thống
-
-- Node.js (v18.0.0 trở lên)
-- npm hoặc yarn
-- Expo CLI
-- Máy ảo Android/iOS hoặc thiết bị thật
-
-### Các bước cài đặt
-
-1. **Clone dự án**
-
-   ```bash
-   git clone https://github.com/SEP490-Monhealth/SEP490-Monhealth-Healthcare-App-MB.git
-   cd Monhealth-Healthcare-App-MB
-   ```
-
-2. **Cài đặt các gói phụ thuộc**
-
-   ```bash
-   npm install
-   # hoặc
-   yarn install
-   ```
-
-3. **Thiết lập biến môi trường**
-
-   ```bash
-   cp .env.example .env
-   # Cập nhật các giá trị trong file .env
-   ```
-
-4. **Khởi chạy ứng dụng**
-
-   ```bash
-   # Khởi động Expo server
-   npx expo start
-
-   # Chạy trên Android
-   npm run android
-
-   # Chạy trên iOS
-   npm run ios
-
-   # Chạy trên Web
-   npm run web
-   ```
-
-5. **Build ứng dụng cho môi trường cụ thể**
-
-   ```bash
-   # Build cho môi trường development
-   npm run build:dev
-
-   # Build cho môi trường preview
-   npm run build:preview
-
-   # Build cho production (Android)
-   npm run build:android:prod
-
-   # Build cho production (iOS)
-   npm run build:ios:prod
-   ```
-
-## 🧪 Kiểm thử
-
-```bash
-# Chạy tất cả các test
-npm run test
-
-# Kiểm tra độ phủ test
-npm run coverage
-
-# Kiểm tra lỗi cú pháp
-npm run lint
-
-# Sửa lỗi cú pháp tự động
-npm run lint:fix
+```sh
+npm ci
+npm start
 ```
 
-## 📁 Cấu trúc thư mục
+Отсканируйте QR из терминала стандартной камерой iPhone → открыть в Expo Go. Разрешите Expo Go доступ к локальной сети, если iOS спросит. Не нужны Expo-аккаунт, `.env`, Firebase, Xcode, EAS или собственная нативная сборка.
 
-```
-monhealth/
-├── app/                # Thư mục chính chứa các routes và screens
-│   ├── (auth)/         # Stack điều hướng cho các màn hình đăng nhập/đăng ký
-│   ├── (tabs)/         # Các tab chính của ứng dụng
-│   ├── index.tsx       # Entry point của ứng dụng
-│   └── _layout.tsx     # Layout tổng thể
-├── assets/             # Hình ảnh, fonts và tài nguyên tĩnh
-├── components/         # React components tái sử dụng
-│   ├── common/         # Components cơ bản (buttons, inputs, etc.)
-│   ├── features/       # Components đặc thù cho từng tính năng
-│   └── layout/         # Components layout
-├── constants/          # Các hằng số và giá trị cấu hình
-├── hooks/              # Custom React hooks
-├── services/           # Logic giao tiếp API và xử lý dữ liệu
-├── stores/             # Zustand stores để quản lý state
-├── types/              # TypeScript type definitions
-└── utils/              # Các hàm tiện ích
+Если обычный порт занят другим проектом:
+
+```sh
+npm run start:lan -- --port 8082
 ```
 
-## 👥 Nhóm phát triển
+Если Wi-Fi блокирует соединение между устройствами, используйте `npm run start:tunnel` (Expo предложит установить `@expo/ngrok`; туннель требует интернет). После обновления зависимостей можно запустить `npm start -- --clear`. Не используйте `--dev-client`: этот этап предназначен для Expo Go.
 
-Dự án được phát triển bởi nhóm 5 thành viên tài năng:
+## Что уже работает
 
-- **Văn Hữu Toàn** - Team Leader & UI/UX Designer
-- **Nguyễn Quốc Đại** - Lead Developer & Architect
-- **Phan Văn Khải** - QA Engineer & Testing
-- **Phạm Hoài Duy** - Backend Integration & API Developer
-- **Nguyễn Phạm Khanh** - Data Management & Performance Optimization
+- Пять вкладок: **Главная, Врачи, Анализы, Club, Профиль**.
+- Поиск по имени врача, специальности, названию и району клиники; фильтры специальностей; карточки клиник.
+- Каталог анализов с обычной и партнёрской ценой Club, поиск и категории.
+- **Club Individual — 3 999 ₸/месяц**, **Club Family — 6 999 ₸/месяц**. Выбор тарифа применяется к новым демозаписям и направлениям.
+- Запись: карточка врача → дата → время → подтверждение → профиль → отмена. Время Алматы; дни рассчитываются динамически. Прошедшие даты, неправильные слоты и совпадающие записи отклоняются.
+- QR-заготовка: анализ → QR → сохранённое направление в профиле. QR содержит только идентификатор демонстрации, без медицинских и персональных данных.
+- Выбранный тариф, записи и направления сохраняются на устройстве. При смене тарифа цена ранее созданной записи не меняется. Повреждённые данные не блокируют запуск.
+- Состояния пустого поиска, отсутствующих карточек и ошибки хранилища.
 
-## 📄 Giấy phép
+**Это автономный прототип.** Врачи, клиники, цены услуг и расписание вымышлены. Нет реальной регистрации, оплаты, подписки, бронирования или действующего медицинского направления. Семейные участники и правила Family ещё не реализованы. Никакие данные не отправляются в Monhealth или партнёрские клиники.
 
-Dự án được phát hành dưới [Giấy phép MHA](LICENSE).
+## Архитектура
 
-## 📞 Liên hệ và hỗ trợ
+- Expo **57**, React Native **0.86**, React **19**, TypeScript strict, Expo Router.
+- `src/app/(tabs)` — пять вкладок; отдельные маршруты врача, клиники, анализа, записи и QR.
+- `src/components` — общая визуальная система и карточки.
+- `src/data/catalog.ts` — типизированный демонстрационный каталог и тарифы.
+- `src/services/catalog.ts` — граница будущего API, React Query.
+- `src/lib/marketplace.ts` — поиск, цены, даты, правила записи, QR-контракт, Zod-схемы.
+- `src/stores/health-store.ts` — Zustand и AsyncStorage; последовательные записи в хранилище.
+- `tests/marketplace.test.ts` — поведенческие проверки правил marketplace.
 
-Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào, vui lòng liên hệ:
+Удалены питание, вода, тренировки, чаты и кошелёк Monhealth, зависимые экраны/сервисы, старые данные Firebase, уведомления и идентификаторы EAS/OTA исходного автора. Стиль интерфейса переведён на React Native StyleSheet: нет лишних Babel/SVG-transformer/NativeWind-зависимостей. Сохранены Expo Router, React Query, Zustand и Zod; подключение API вынесено отдельно.
 
-- **Email**: monhealth.contact@gmail.com
-- **GitHub**: [SEP490-Monhealth](https://github.com/SEP490-Monhealth)
+## Проверки
 
----
+```sh
+npm run check       # TypeScript, ESLint, тесты бизнес-правил
+npm run doctor      # Проверка совместимости с Expo Go
+npm run export:ios  # Сборка iOS bundle (это не запуск на телефоне)
+npm run export:web  # Сборка веб-превью
+npm run web         # Интерактивное превью
+```
 
-<div align="center">
-  <p>© 2025 Monhealth. Mọi quyền được bảo lưu.</p>
-</div>
+7 октября 2026: запуск на физическом iPhone в Expo Go, пять вкладок и запись подтверждены пользователем. Expo Doctor: 21/21. Дополнительно проверяются поиск, смена тарифа, QR, отмена и сохранение после перезапуска в веб-превью.
+
+Перед production: подключить авторизацию и API партнёров, серверную проверку цены/доступности, платежи и проверяемый статус membership, правила Family, подписанные одноразовые QR и защиту медицинских данных. AsyncStorage здесь хранит только демоданные и не предназначен для медицинской карты.
+
+`npm audit` у выбранного SDK сообщает о транзитивных зависимостях инструментов (braces, node-forge, uuid) и query-string/decode-uri-component. Автоматическое `audit fix --force` предлагает несовместимые major-версии, поэтому не применяется. Нужна повторная проверка и исправление зависимостей до production; совместимость с Expo Go сейчас зафиксирована lock-файлом.
+
+## Лицензия
+
+[MIT](LICENSE), исходный copyright © 2024 Van Huu Toan сохранён. Адаптация SANA Health — 2026.
